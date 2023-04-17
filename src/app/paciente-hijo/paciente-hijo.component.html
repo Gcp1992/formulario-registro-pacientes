@@ -1,0 +1,17 @@
+<!--Me traigo al hijo la tabla que nos devuelve la informacion de los pacientes
+Da errores porque aqui no tenemos el ngFor y no reconoce todo lo de dentro y la
+declaración de sus elementos están en el componente padre
+Debemos pasar la información del componente padre al hijo. En este caso la declaración
+de paciente y de i. Para eso se usa la directiva @Input-->
+<table>
+  <tr>
+    <td>
+      <!--Aquí usaremos los identificadores creados en el componente padre (si reconoce)-->
+      {{indice+1}}: {{pacienteLista.nombre}}  {{pacienteLista.apellidos}}  {{pacienteLista.dni}}  {{pacienteLista.telefono}}
+      {{pacienteLista.direccion}}  {{pacienteLista.email}}
+    </td>
+    <!--Cambiamos a nuestro nombre de selector padre
+    Le ponemos el nombre de la función ts del hijo-->
+
+  </tr>
+</table>

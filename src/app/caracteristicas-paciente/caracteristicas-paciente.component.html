@@ -1,0 +1,5 @@
+<label>Datos: </label>
+<input type="text" id="item-input" #nuevaCaracteristica>
+<!--Pulsamos el boton y llamamos a la función del ts que recibe un parámetro string
+que lo recoge de los inputs del formulario-->
+<button type="button" (click)="agregaCaracteristicas(nuevaCaracteristica.value)">Añadir dato</button>

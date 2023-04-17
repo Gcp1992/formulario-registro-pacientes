@@ -1,0 +1,21 @@
+<h1>Formulario pacientes</h1>
+
+<label for="nombre">Nombre: </label> <input type="text" [(ngModel)]="nombre"><br>
+<label for="apellidos">Apellidos: </label> <input type="text" [(ngModel)]="apellidos"><br>
+<label for="dni">DNI: </label> <input type="text" [(ngModel)]="dni"><br>
+<label for="telefono">Teléfono: </label> <input type="text" [(ngModel)]="telefono"><br>
+<label for="direccion">Dirección: </label> <input type="text" [(ngModel)]="direccion"><br>
+<label for="email">Email: </label> <input type="text" [(ngModel)]="email"><br><br>
+
+<input type="submit" value="Registrar" (click)="agregarPaciente()">
+<!--Comunicación entre componentes-->
+<h2>Listado de pacientes</h2>
+
+<!--Metemos la directiva que inicialmente estaba en nuestro tr del componente padre
+en la etiqueta del componente hijo
+Para pasar la información al hijo de los elementos del ngFor debemos asignarles
+un nombre identificativo(pueden ser iguales o no)-->
+<app-paciente-hijo *ngFor="let paciente of pacientes; let i=index" [pacienteLista]="paciente"
+[indice]="i"></app-paciente-hijo>
+
+
